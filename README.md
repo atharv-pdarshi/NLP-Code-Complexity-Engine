@@ -194,6 +194,8 @@ python main.py
 ```bash
 streamlit run app.py
 ```
+---
+
 ## 📂 Project Structure
 
 The project follows a modular, industry-standard directory structure:
@@ -217,3 +219,4 @@ AutoJudge/
 ├── models/                # Serialized Model Artifacts
 └── reports/               # Generated Graphs & Logs
 ```
+---

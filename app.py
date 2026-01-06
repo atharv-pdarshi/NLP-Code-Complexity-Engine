@@ -215,17 +215,23 @@ if analyze_btn:
 
         with res_c1:
             st.markdown("**Difficulty Class**")
-            # Dynamic Color Badge
-            if pred_class == "Easy":
-                bg = "#00c853"
-            elif pred_class == "Medium":
-                bg = "#ffd600"  # Amber
+
+            # --- FIX: ROBUST LOWERCASE CHECK ---
+            p_class = str(pred_class).lower().strip()
+
+            if p_class == "easy":
+                bg = "#00c853"  # Green
+                label_color = "#ffffff"
+            elif p_class == "medium":
+                bg = "#ffab00"  # Amber/Orange
+                label_color = "#000000"
             else:
                 bg = "#d50000"  # Red
+                label_color = "#ffffff"
 
             st.markdown(f"""
             <div style="background:{bg}; padding:10px; border-radius:8px; text-align:center;">
-                <h3 style="margin:0; text-shadow: 0px 1px 2px rgba(0,0,0,0.5);">{pred_class.upper()}</h3>
+                <h3 style="margin:0; color:{label_color}; text-shadow: 0px 1px 2px rgba(0,0,0,0.3);">{pred_class.upper()}</h3>
             </div>
             """, unsafe_allow_html=True)
 

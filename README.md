@@ -37,7 +37,7 @@ The system is deployed via a modern **Streamlit Web Interface** allowing for rea
 
 ## 🎥 Demo Video
 
-> ****
+> **https://youtu.be/9ubKkxGNvCw**
 >
 > *Duration: 2-3 Minutes*
 > *Overview of Architecture, Model Training, and Web UI Demonstration.*
